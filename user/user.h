@@ -22,7 +22,7 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void); 
-int getcnt(int); // added syscall
+int getcnt(void); // added syscall
 
 // ulib.c
 int stat(const char*, struct stat*);

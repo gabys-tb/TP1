@@ -16,6 +16,23 @@
 #include "file.h"
 #include "fcntl.h"
 
+
+int 
+sys_getcnt(void) 
+{
+    int syscall_num = -1;  
+  
+    argint(0, &syscall_num);
+
+    if (syscall_num < 0 || syscall_num >= 24) {
+        return -1;  // Retorna -1 se o número da syscall é inválido
+    }
+
+    return syscall_count[syscall_num];  // Retorna o contador da syscall
+}
+
+
+
 // Fetch the nth word-sized system call argument as a file descriptor
 // and return both the descriptor and the corresponding struct file.
 static int
