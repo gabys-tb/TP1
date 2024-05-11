@@ -6,6 +6,15 @@
 #include "spinlock.h"
 #include "proc.h"
 
+int 
+sys_getcnt(int syscall_num) 
+{
+    if (syscall_num < 0 || syscall_num >= 24) {
+        return -1;  // Retorna -1 se o número da syscall é inválido
+    }
+    return syscall_count[syscall_num];  // Retorna o contador da syscall
+}
+
 uint64
 sys_exit(void)
 {
