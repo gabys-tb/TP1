@@ -1,5 +1,5 @@
 
-extern int syscall_count[24];
+extern int syscall_count[24]; // adicionado
 
 // Saved registers for kernel context switches.
 struct context {

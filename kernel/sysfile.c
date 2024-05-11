@@ -16,7 +16,7 @@
 #include "file.h"
 #include "fcntl.h"
 
-
+// adicionado
 int 
 sys_getcnt(void) 
 {
