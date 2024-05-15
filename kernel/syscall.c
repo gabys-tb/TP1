@@ -7,7 +7,7 @@
 #include "syscall.h"
 #include "defs.h"
 
-int syscall_count[24] = {0}; //adicionado
+int syscall_count[23] = {0}; //adicionado
 
 // Fetch the uint64 at addr from the current process.
 int
