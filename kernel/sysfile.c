@@ -24,7 +24,7 @@ sys_getcnt(void)
   
     argint(0, &syscall_num);
 
-    if (syscall_num < 0 || syscall_num >= 23) {
+    if (syscall_num < 1 || syscall_num >= 23) {
         return -1;  // Retorna -1 se o número da syscall é inválido
     }
 
